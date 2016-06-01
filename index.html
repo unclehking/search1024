@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<title>HKing</title>
+		<style media="screen">
+			#wait{
+				position: fixed;
+				left: 0;
+				bottom: 0px;
+				width: 100%;
+				height: 30px;
+				background-color: #f4f4f4;
+				display: none;
+			}
+			a:visited{display: none;}
+		</style>
+	</head>
+	<body>
+		<div id="wait">卖萌滴查询中......</div>
+		<input type="text" id="keyword" value="">
+		<input type="button" id="search" value="search">
+		<div id="wrap">
+
+		</div>
+	</body>
+
+	    <script>
+	    // You can also require other files to run in this process
+		require('./jquery-1.7.2.min.js');
+	    require('./renderer.js');
+
+	    </script>
+	</html>
