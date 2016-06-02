@@ -6,11 +6,17 @@ function sm(msg){
 	$("#wrap").append('<p><a href="'+msg+'" target="_blank">'+msg+'</a></p>')
 }
 
+function fuckImg(msg){
+	$("#wrap").append('<p><img src="'+msg+'" /></p>')
+}
+
+
+
 function search1024(keyword){
 	var reg = new RegExp(keyword);
-	var rUrl = "http://1024.xp303.info/pw/";
-	var oUrl = "http://1024.xp303.info/pw/thread.php?fid=3&page=";
-	for (var i = 1; i < 69; ++i) {
+	var rUrl = "http://ess.fuli1024.rocks/pw/";
+	var oUrl = "http://ess.fuli1024.rocks/pw/thread.php?fid=22&page=";
+	for (var i = 1; i < 173; ++i) {
 		$.ajax({
 			url: oUrl+i,
 			async: true,
@@ -25,6 +31,8 @@ function search1024(keyword){
 							success:function(data){
 								if(reg.test(data)){
 									sm(rUrl+t.attr('href'));
+									var imgSrc = $(data).find("#read_tpc img:first");
+									fuckImg(imgSrc[0].src);
 									console.log("");
 									console.log("写入");
 								}else{
